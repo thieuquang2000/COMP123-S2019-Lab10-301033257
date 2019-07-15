@@ -19,7 +19,7 @@ namespace COMP123_S2019_Lab10_301033257
 
         private void EndFrom_Tick(object sender, EventArgs e)
         {
-            SplashTimer.Enabled = false;
+            
             MainForm mainForm = new MainForm();
             mainForm.Show();
             this.Hide();
@@ -27,7 +27,7 @@ namespace COMP123_S2019_Lab10_301033257
 
         private void EndForm_Load(object sender, EventArgs e)
         {
-            SplashTimer.Enabled = true;
+            
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
@@ -36,5 +36,11 @@ namespace COMP123_S2019_Lab10_301033257
         }
         public static StartForm startform;
 
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StartForm startForm = new StartForm();
+            startForm.Show();
+        }
     }
 }

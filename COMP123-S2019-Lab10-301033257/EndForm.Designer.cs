@@ -28,16 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.SplashTimer = new System.Windows.Forms.Timer(this.components);
             this.BackButton = new System.Windows.Forms.Button();
             this.CloseButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // SplashTimer
-            // 
-            this.SplashTimer.Interval = 3000;
-            this.SplashTimer.Tick += new System.EventHandler(this.EndFrom_Tick);
             // 
             // BackButton
             // 
@@ -48,6 +41,7 @@
             this.BackButton.TabIndex = 0;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // CloseButton
             // 
@@ -81,8 +75,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Timer SplashTimer;
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Button CloseButton;
     }
